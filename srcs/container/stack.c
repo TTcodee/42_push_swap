@@ -29,5 +29,8 @@ t_stack	*stack_init()
 	ret->size = 0;
 	ret->push = push;
 	ret->pop = pop;
+	ret->rotate = rotate;
+	ret->rev_rotate = rev_rotate;
+	ret->swap = swap;
 	return (ret);
 }
