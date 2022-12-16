@@ -1,12 +1,12 @@
 #include "stack.h"
 
-int	push(t_stack *self, void *data)
+static int	push(t_stack *self, void *data)
 {
 	self->size = self->stack->len + 1;
 	return (self->stack->addlast(self->stack, data));
 }
 
-void	*pop(t_stack *self)
+static void	*pop(t_stack *self)
 {
 	void	*tmp;
 
@@ -14,6 +14,12 @@ void	*pop(t_stack *self)
 	self->stack->rmlast(self->stack, NULL);
 	self->size = self->stack->len;
 	return (tmp);
+}
+
+static clear(t_stack *self, void (*del)(void *))
+{
+	self->stack->clear(self->stack, del);
+	return ;
 }
 
 t_stack	*stack_init()
@@ -32,5 +38,6 @@ t_stack	*stack_init()
 	ret->rotate = rotate;
 	ret->rev_rotate = rev_rotate;
 	ret->swap = swap;
+	ret->clear = clear;
 	return (ret);
 }

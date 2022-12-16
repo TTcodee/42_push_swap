@@ -1,6 +1,6 @@
 #include "dlist.h"
 
-int	addfirst(t_dlist *self, void *data)
+static int	addfirst(t_dlist *self, void *data)
 {
 	t_dnode	*node;
 
@@ -17,7 +17,7 @@ int	addfirst(t_dlist *self, void *data)
 	return (1);
 }
 
-int	addlast(t_dlist *self, void *data)
+static int	addlast(t_dlist *self, void *data)
 {
 	t_dnode	*node;
 
@@ -34,7 +34,7 @@ int	addlast(t_dlist *self, void *data)
 	return (1);
 }
 
-void	rmfirst(t_dlist *self, void (*del)(void *))
+static void	rmfirst(t_dlist *self, void (*del)(void *))
 {
 	t_dnode	*tmp;
 
@@ -51,7 +51,7 @@ void	rmfirst(t_dlist *self, void (*del)(void *))
 	return ;
 }
 
-void	rmlast(t_dlist *self, void (*del)(void *))
+static void	rmlast(t_dlist *self, void (*del)(void *))
 {
 	t_dnode	*tmp;
 
@@ -82,5 +82,6 @@ t_dlist	*dlist_init()
 	ret->addlast = addlast;
 	ret->rmfirst = rmfirst;
 	ret->rmlast = rmlast;
+	ret->clear = clear;
 	return (ret);
 }

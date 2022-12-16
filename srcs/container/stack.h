@@ -14,10 +14,9 @@ struct s_stack
 	void		(*swap)(t_stack *);
 	void		(*rotate)(t_stack *);
 	void		(*rev_rotate)(t_stack *);
+	void		(*clear)(t_stack *,void (*)(void *));
 };
 
-int		push(t_stack *self, void *data);
-void		*pop(t_stack *self);
 void		swap(t_stack *self);
 void		rotate(t_stack *self);
 void		rev_rotate(t_stack *self);
