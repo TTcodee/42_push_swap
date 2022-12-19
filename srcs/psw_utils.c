@@ -1,4 +1,4 @@
-#include "psw.h"
+#include "../include/psw.h"
 
 int	ft_isnum(char *str)
 {

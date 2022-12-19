@@ -1,4 +1,4 @@
-#include "stack.h"
+#include "../../include/stack.h"
 
 static int	push(t_stack *self, void *data)
 {
@@ -16,7 +16,7 @@ static void	*pop(t_stack *self)
 	return (tmp);
 }
 
-static clear(t_stack *self, void (*del)(void *))
+static void clear(t_stack *self, void (*del)(void *))
 {
 	self->stack->clear(self->stack, del);
 	return ;

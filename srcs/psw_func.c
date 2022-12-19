@@ -6,17 +6,17 @@
 /*   By: ppanpais <ppanpais@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 00:38:38 by ppanpais          #+#    #+#             */
-/*   Updated: 2022/12/15 00:43:23 by ppanpais         ###   ########.fr       */
+/*   Updated: 2022/12/19 01:22:18 by ppanpais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "psw.h"
+#include "../include/psw.h"
 
 void	push(t_stack *a, t_stack *b, char c)
 {
 	if (c == 'a')
 	{
-		ft_putchar_fd("pa\n", 1);
+		ft_putstr_fd("pa\n", 1);
 		a->push(a, b->pop(b));
 	}
 	else if (c == 'b')
@@ -33,7 +33,7 @@ void	sw(t_stack *a, t_stack *b, char c)
 {
 	if (c == 'a')
 	{
-		ft_putchar_fd("sa\n", 1);
+		ft_putstr_fd("sa\n", 1);
 		a->swap(a);
 	}
 	else if (c == 'b')
@@ -50,7 +50,7 @@ void	ro(t_stack *a, t_stack *b, char c)
 {
 	if (c == 'a')
 	{
-		ft_putchar_fd("ra\n", 1);
+		ft_putstr_fd("ra\n", 1);
 		a->rotate(a);
 	}
 	else if (c == 'b')
@@ -67,7 +67,7 @@ void	rro(t_stack *a, t_stack *b, char c)
 {
 	if (c == 'a')
 	{
-		ft_putchar_fd("rra\n", 1);
+		ft_putstr_fd("rra\n", 1);
 		a->rev_rotate(a);
 	}
 	else if (c == 'b')

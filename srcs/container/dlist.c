@@ -1,6 +1,6 @@
-#include "dlist.h"
+#include "../../include/dlist.h"
 
-static int	addfirst(t_dlist *self, void *data)
+int	lst_addfirst(t_dlist *self, void *data)
 {
 	t_dnode	*node;
 
@@ -17,7 +17,7 @@ static int	addfirst(t_dlist *self, void *data)
 	return (1);
 }
 
-static int	addlast(t_dlist *self, void *data)
+int	lst_addlast(t_dlist *self, void *data)
 {
 	t_dnode	*node;
 
@@ -34,7 +34,7 @@ static int	addlast(t_dlist *self, void *data)
 	return (1);
 }
 
-static void	rmfirst(t_dlist *self, void (*del)(void *))
+void	lst_rmfirst(t_dlist *self, void (*del)(void *))
 {
 	t_dnode	*tmp;
 
@@ -51,7 +51,7 @@ static void	rmfirst(t_dlist *self, void (*del)(void *))
 	return ;
 }
 
-static void	rmlast(t_dlist *self, void (*del)(void *))
+void	lst_rmlast(t_dlist *self, void (*del)(void *))
 {
 	t_dnode	*tmp;
 
@@ -78,10 +78,10 @@ t_dlist	*dlist_init()
 	ret->len = 0;
 	ret->start = NULL;
 	ret->last = NULL;
-	ret->addfirst = addfirst;
-	ret->addlast = addlast;
-	ret->rmfirst = rmfirst;
-	ret->rmlast = rmlast;
-	ret->clear = clear;
+	ret->addfirst = lst_addfirst;
+	ret->addlast = lst_addlast;
+	ret->rmfirst = lst_rmfirst;
+	ret->rmlast = lst_rmlast;
+	ret->clear = lst_clear;
 	return (ret);
 }

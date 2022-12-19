@@ -1,4 +1,4 @@
-#include "psw.h"
+#include "../include/psw.h"
 
 // compare first two num on the top of stack
 // (return top - but)
@@ -40,5 +40,5 @@ static void	split(t_stack *a, t_stack *b)
 psw_sort(t_stack *a, t_stack *b)
 {
 	split(a, b);
-
+  	
 }

@@ -1,4 +1,4 @@
-#include "../psw.h"
+#include "../../include/psw.h"
 
 void	arr_swap(int *nums, int *indexes, int i, int j)
 {

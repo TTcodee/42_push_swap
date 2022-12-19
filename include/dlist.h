@@ -24,11 +24,11 @@ struct s_dlist
 	void		(*clear)(t_dlist *self, void (*del)(void *));
 };
 
-int	addfirst(t_dlist *self, void *data);
-int	addlast(t_dlist *self, void *data);
-void	rmfirst(t_dlist *self, void (*del)(void *));
-void	rmlast(t_dlist *self, void (*del)(void *));
-void	clear(t_dlist *self, void (*del)(void *));
+int	lst_addfirst(t_dlist *self, void *data);
+int	lst_addlast(t_dlist *self, void *data);
+void	lst_rmfirst(t_dlist *self, void (*del)(void *));
+void	lst_rmlast(t_dlist *self, void (*del)(void *));
+void	lst_clear(t_dlist *self, void (*del)(void *));
 t_dlist	*dlist_init(void);
 
 #endif

@@ -1,6 +1,6 @@
-#include "dlist.h"
+#include "../../include/dlist.h"
 
-void	clear(t_dlist *self, void (*del)(void *))
+void	lst_clear(t_dlist *self, void (*del)(void *))
 {
 	t_dnode	*walker;
 	t_dnode	*tmp;
