@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"dclist.h": "c",
+		"libft.h": "c",
+		"dlist.h": "c",
+		"psw.h": "c"
+	}
+}

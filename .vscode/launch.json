@@ -8,10 +8,10 @@
 			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/${fileBasenameNoExtension}",
-			"args": [],
+			"program": "${workspaceFolder}/TEST",
+			"args": ["1", "2", "3", "4"],
 			"stopAtEntry": false,
-			"cwd": "${fileDirname}",
+			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"externalConsole": false,
 			"MIMode": "gdb",
@@ -22,13 +22,12 @@
 				"ignoreFailures": true
 			    },
 			    {
-				"description":  "Set Disassembly Flavor to Intel",
+				"description": "Set Disassembly Flavor to Intel",
 				"text": "-gdb-set disassembly-flavor intel",
 				"ignoreFailures": true
 			    }
 			]
 		}
-		
 
 	]
 }
