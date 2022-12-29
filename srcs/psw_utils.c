@@ -6,13 +6,13 @@
 /*   By: ppanpais <ppanpais@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:59:13 by ppanpais          #+#    #+#             */
-/*   Updated: 2022/12/23 14:59:14 by ppanpais         ###   ########.fr       */
+/*   Updated: 2022/12/27 16:03:36 by ppanpais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/psw.h"
 
-int	floor(double n)
+int	m_floor(double n)
 {
 	int	m;
 
@@ -20,7 +20,7 @@ int	floor(double n)
 	return (m);
 }
 
-int	ciel(double n)
+int	m_ciel(double n)
 {
 	int	m;
 

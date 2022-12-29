@@ -6,7 +6,7 @@
 #    By: ppanpais <ppanpais@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 14:48:37 by ppanpais          #+#    #+#              #
-#    Updated: 2022/12/19 13:05:07 by ppanpais         ###   ########.fr        #
+#    Updated: 2022/12/27 16:13:01 by ppanpais         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CONTAINER_DIR	=	${SRC_DIR}container/
 ALG_DIR		=	${SRC_DIR}algorithm/
 SRC_FILES	=	psw_func.c psw_utils.c
 CONTAINER_FILES	=	dlist_utils.c dlist.c stack.c stack_utils.c
-ALG_FILES	=	med_finding.c
+ALG_FILES	=	med_finding.c kawaii_sort.c sort.c
 SRCS		=	$(CONTAINER_FILES:%=${CONTAINER_DIR}%)	\
 				$(ALG_FILES:%=${ALG_DIR}%)	\
 				$(SRC_FILES:%=${SRC_DIR}%)
